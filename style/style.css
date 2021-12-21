@@ -601,14 +601,14 @@ nav .search-btn button::before {
 }
 
 .cart-wrapper {
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      flex-wrap: wrap; */
   margin: 25px 0;
   border: 1px solid #4d5f713f;
   border-radius: 3px;
@@ -616,10 +616,43 @@ nav .search-btn button::before {
 }
 
 .cart-wrapper #cart-empty {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 24px;
   color: #4d5f71;
 }
-
+.cart-item {
+  margin: 0 10px;
+}
+.counter {
+  height: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid; */
+}
+.counter > p {
+  margin: 0;
+  padding: 0 20px;
+}
+svg {
+  width: 30px;
+  height: 30px;
+  padding: 3px 7px;
+  display: block;
+  fill: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: .2s linear;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 3px;
+}
+svg:hover{
+  border: 1px solid rgb(0, 0, 0);
+}
+.left-arrow {
+  transform: rotate(180deg);
+}
 .cart-wrapper .card {
   width: 33%;
 }
