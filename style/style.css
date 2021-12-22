@@ -13,6 +13,9 @@
 body {
   font-family: "GTEestiProText", Arial, sans-serif;
 }
+p {
+  margin: 0;
+}
 
 button {
   outline: transparent;
@@ -484,14 +487,14 @@ nav .search-btn button::before {
   display: block;
 }
 
-.filter-check_checkmark:after {
+.filter-check_checkmark::after {
   display: none;
   width: 15px;
   height: 15px;
   position: absolute;
   top: -4px;
   left: 2px;
-  content: "";
+  content: attr(data-el) " ";
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 15 15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.3 15L15 1.2 13.7 0 5.1 12.3 1.1 8 0 9.4 5.3 15z' fill='%23005bff'/%3E%3C/svg%3E");
 }
 
@@ -621,40 +624,9 @@ nav .search-btn button::before {
   font-size: 24px;
   color: #4d5f71;
 }
-.cart-item {
-  margin: 0 10px;
-}
-.counter {
-  height: 40px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border: 1px solid; */
-}
-.counter > p {
-  margin: 0;
-  padding: 0 20px;
-}
-svg {
-  width: 30px;
-  height: 30px;
-  padding: 3px 7px;
-  display: block;
-  fill: rgb(0, 0, 0);
-  cursor: pointer;
-  transition: .2s linear;
-  border: 1px solid rgba(0, 0, 0, 0);
-  border-radius: 3px;
-}
-svg:hover{
-  border: 1px solid rgb(0, 0, 0);
-}
-.left-arrow {
-  transform: rotate(180deg);
-}
 .cart-wrapper .card {
-  width: 33%;
+  width: 31%;
+  margin: 5px 10px;
 }
 
 @media (max-width: 992px) {

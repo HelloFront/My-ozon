@@ -1,12 +1,15 @@
 import addBacket from "./addBacket";
-import getData from "./getData"
+import getData from "./getData";
+import saleFilter from "./saleFilter";
 
 const renderData = (arr) => {
     const goods = document.querySelector('.goods')
     goods.innerHTML = '';
 
     if(!arr) {
-        getData().then(data => showContent(data))
+        getData().then(data => {
+            showContent(data)
+        })
     } else showContent(arr);
 
     function showContent (arr) {
@@ -28,6 +31,7 @@ const renderData = (arr) => {
                 </div>`)
         });
         addBacket();
+        saleFilter()
     }
 }
 export default renderData
